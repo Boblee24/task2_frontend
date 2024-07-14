@@ -1,0 +1,66 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Double Cheeseburger",
+      "image": "image1.svg",
+      "price": 3887.53,
+      "description": "The McDonald's Double Cheeseburger features two (2) pure all beef patties topped with tangy pickles, ketchup, mustard, and two melty American cheese slices."
+    },
+    {
+      "id": 2,
+      "name": "Chicken Sandwich",
+      "image": "chicken.png",
+      "price": 2698.38,
+      "description": "Crispy coated chicken with lettuce and our sandwich sauce, in a soft, sesame-topped bun."
+    },
+    {
+      "id": 3,
+      "name": "Sausage Burrito",
+      "image": "burrito.png",
+      "price": 1964.15,
+      "description": "McDonald's Sausage Burrito is a delicious breakfast burrito with fluffy eggs & pork sausage."
+    },
+    {
+      "id": 4,
+      "name": "Hamburger",
+      "image": "hamburger.png",
+      "price": 1964.25,
+      "description": "McDonald's Sausage Burrito is a delicious breakfast burrito with fluffy eggs & pork sausage."
+    },
+    {
+      "id": 5,
+      "name": "Sausage Biscuit",
+      "image": "biscuit.png",
+      "price": 1800.0,
+      "description": "McDonald's Sausage Biscuit is the perfect sausage breakfast sandwich to start your day! "
+    },
+    {
+      "id": 6,
+      "name": "Hash Browns",
+      "image": "brown.png",
+      "price": 1250.0,
+      "description": "Crispy, homemade hash browns are quick, easy, and family-friendly, making them perfect as a side dish for any breakfast or brunch."
+    }
+  ],
+  "sides": [
+    {
+      "id": 11,
+      "name": "Chicken Nuggets",
+      "image": "nugget.png",
+      "price": 780.0
+    },
+    {
+      "id": 12,
+      "name": "Fries",
+      "image": "fries.png",
+      "price": 980.0
+    },
+    {
+      "id": 13,
+      "name": "Drink",
+      "image": "drink.png",
+      "price": 550.0
+    }
+  ]
+}
