@@ -30,10 +30,10 @@ const App: React.FC = () => {
 
   const fetchProducts = async (page: number) => {
     const response = await fetch(`https://task2-backend.vercel.app/api/products?page=${page}&size=10`);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
   };
 
   const { data, isLoading, error } = useQuery({
