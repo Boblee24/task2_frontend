@@ -29,13 +29,12 @@ const App: React.FC = () => {
   const showPagination = location.pathname === '/';
 
   const fetchProducts = async (page: number) => {
-    const response = await fetch(`https://task2-backend.vercel.app/api/products?page=${page}&size=10`);
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-  return response.json();
+    const response = await fetch(`https://task2-backend-git-master-boblee24s-projects.vercel.app//api/products?page=${page}&size=10`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
   };
-
   const { data, isLoading, error } = useQuery({
     queryKey: ['food', currentPage],
     queryFn: () => fetchProducts(currentPage),
