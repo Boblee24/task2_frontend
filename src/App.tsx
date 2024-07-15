@@ -29,7 +29,7 @@ const App: React.FC = () => {
   const showPagination = location.pathname === '/';
 
   const fetchProducts = async (page: number) => {
-    const response = await fetch(`http://localhost:5000/api/products?page=${page}&size=10`);
+    const response = await fetch(`https://task2-backend.vercel.app/api/products?page=${page}&size=10`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
