@@ -28,6 +28,10 @@ const CheckOut: React.FC<CheckOutProps> = ({ cartItems, setCartItems }) => {
     const handleRemoveItem = (foodId: number) => {
         setCartItems(prevItems => prevItems.filter(item => item.id !== foodId));
     };
+    const clearCart = () => {
+        console.log("clearing cart");
+        setCartItems([]);   
+    }
     const calculateTotal = () => {
         return cartItems.reduce((acc, item) => acc + item.current_price[0].NGN[0] * item.quantity, 0).toFixed(2);
     };
@@ -79,6 +83,9 @@ const CheckOut: React.FC<CheckOutProps> = ({ cartItems, setCartItems }) => {
                         ))}
                     </div>
                 )}
+                    <button onClick={() => clearCart} className="text-[#FFF078] font-semibold text-center mb-2">
+                        Clear Cart
+                    </button>
                 {cartItems.length > 0 && (
                     <div className="flex gap-1 justify-center mt-4 mb-8">
                         <img src={phone} alt="phone" className="px-[1rem] py-[.8rem] border-2 border-solid border-[#FF7F3E] rounded-md" />

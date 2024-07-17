@@ -1,0 +1,18 @@
+{isLoading ? (
+          <>Loading...</>
+        ) : (
+          <>
+            <Route
+              path="/"
+              element={
+                <Main
+                  productItems={productItems}
+                  handleAddToCart={handleAddToCart}
+                  currentPage={currentPage}
+                  setCurrentPage={setCurrentPage}
+                />
+              }
+            />
+            <Route path="/:name" element={<ProductDisplay productItems={productItems} handleAddToCart={handleAddToCart} />} />
+          </>
+        )}

@@ -13,25 +13,29 @@ interface MainProps {
 const Main: React.FC<MainProps> = ({ handleAddToCart, productItems, currentPage, setCurrentPage }) => {
     const navigate = useNavigate();
 
-    
+
     const truncateDescription = (description: string | undefined, maxLength: number) => {
         if (!description) return '';
         if (description.length > maxLength) {
-          return description.slice(0, maxLength) + '...';
+            return description.slice(0, maxLength) + '...';
         }
         return description;
-      };
+    };
 
     return (
         <div>
-            <div className='px-[2rem] w-full'>
+            <div className='px-[1rem] w-full'>
                 <div className="flex items-center flex-col justify-center w-full">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                    <div className="flex flex-wrap justify-center gap-4 w-full m-auto">
                         {productItems?.map((food: Food) => (
                             <div onClick={() => {
                                 navigate(`/${food.name}`)
+                                setTimeout(() => {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                  }, 0);
+                            
                             }}>
-                                <div key={food.id} className="my-[2rem] flex flex-col px-10 cursor-pointer">
+                                <div key={food.id} className="my-[2rem] flex flex-col px-10 cursor-pointer max-w-[420px]">
                                     <img src={`https://api.timbu.cloud/images/${food.photos[0].url}`} alt={food.name} className="rounded-full w-2/3 m-auto md:m-0" />
                                     <h2 className="text-[1.3rem] md:text-[1.5rem] py-3 leading-8 text-[#FFF078]">{food.name}</h2>
                                     <p className="text-[#FFF078] text-[.9rem] md:text-[.9rem] md:h-[150px]">{truncateDescription(food.description, 150)}</p>
@@ -46,10 +50,10 @@ const Main: React.FC<MainProps> = ({ handleAddToCart, productItems, currentPage,
                         ))}
                     </div>
                 </div>
-                
+
 
             </div>
-            
+
         </div>
     )
 }
